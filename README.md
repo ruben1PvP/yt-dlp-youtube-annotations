@@ -10,7 +10,7 @@ This plugin downloads those archived annotations and adds them as subtitles unde
 Check the [how to install yt-dlp plugins](https://github.com/yt-dlp/yt-dlp#installing-plugins) section to learn how to install this and other plugins.
 
 ## Usage
-This plugin adds the annotations as the "languagecode" `annotations`. This means that, for downloading them, you have to use `--sub-langs annotations`. 
+This plugin adds the annotations as the "languagecode" `annotations`. This means that for downloading them you have to use `--sub-langs annotations`, and that they are included when using `--sub-langs all`. 
 
 ## Observations
 * As the plugin basically adds a new subtitle "language", the infojson will have a new "annotations" key in the "subtitles" dictionary.
