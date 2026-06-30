@@ -9,6 +9,13 @@ class _YoutubeAnnotationsIE(YoutubeIE, plugin_name='youtube-annotations'):
         
         annotation_url = 'https://storage.googleapis.com/biggest_bucket/annotations/'+video_id[0]+'/'+video_id[0:3]+'/'+video_id+'.xml.gz'
         
+        annotation_data = self._download_webpage(
+             annotation_url, video_id,
+             errnote='Failed to download annotations',
+             fatal=False)
+        if not annotation_data:
+             return info
+        
         info['subtitles'].setdefault('annotations', []).append({'url': annotation_url, 'ext': 'xml'})
 
         return info
