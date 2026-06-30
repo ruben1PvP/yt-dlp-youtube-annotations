@@ -1,4 +1,4 @@
-# Youtube Annotations Downloader
+# Youtube Annotations Downloader Plugin
 
 This plugin adds the ability to download annotations from Youtube. 
 
